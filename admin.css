@@ -1,0 +1,237 @@
+.vapi-call-logs-filters {
+    margin: 20px 0;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+}
+
+.vapi-call-logs-filters input,
+.vapi-call-logs-filters select {
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.phone-search-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#phone-search {
+    padding-right: 30px;
+    width: 200px;
+}
+
+#clear-search {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    font-size: 16px;
+    padding: 2px 5px;
+}
+
+#clear-search:hover {
+    color: #000;
+}
+
+.org-badge {
+    background: #2271b1;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-queued { background: #fff3cd; color: #856404; }
+.status-ringing { background: #cce5ff; color: #0056b3; }
+.status-in-progress { background: #d1ecf1; color: #0c5460; }
+.status-ended { background: #d4edda; color: #155724; }
+.status-failed { background: #f8d7da; color: #721c24; }
+.status-unknown { background: #e2e3e5; color: #383d41; }
+
+#vapi-loading {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+#call-details-modal {
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    overflow-y: auto;
+    padding: 20px 0;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 20px auto;
+    padding: 0;
+    border: none;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-content h2 {
+    background: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 1.4em;
+    color: #495057;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    line-height: 1;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    background-color: #f8f9fa;
+}
+
+#call-details-content {
+    padding: 20px;
+}
+
+.organizations-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.organizations-table th,
+.organizations-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.organizations-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+}
+
+.org-status {
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.org-status.active {
+    background: #d4edda;
+    color: #155724;
+}
+
+.org-status.inactive {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.detail-item {
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.recording-section {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.recording-actions {
+    margin-top: 10px;
+}
+
+.messages-section .user-message {
+    background: #e3f2fd !important;
+}
+
+.messages-section .assistant-message {
+    background: #f3e5f5 !important;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10px auto;
+        max-height: 95vh;
+    }
+    
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vapi-call-logs-filters input,
+    .vapi-call-logs-filters select,
+    .vapi-call-logs-filters button {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    
+    .phone-search-container {
+        width: 100%;
+    }
+    
+    #phone-search {
+        width: 100%;
+    }
+}
